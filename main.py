@@ -11,10 +11,12 @@ class Triangle:
         self.a = a
         self.b = b
         self.c = c
+        
     def check_triangle(self, a, b, c): #Проверка на прямоугольный треугольник
         if a ** 2 == b ** 2 + c ** 2 or b ** 2 == a ** 2 + c ** 2 or c ** 2 == a ** 2 + b ** 2:
             return True
         return False
+        
     def area_triangle(self, a, b, c): #Вычисление площади треугольника
         p = (a + b + c) / 2
         return round(math.sqrt(p * ((p - a) * (p - b) * (p - c))), 2)
