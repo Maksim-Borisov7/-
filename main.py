@@ -19,4 +19,3 @@ class Triangle:
         p = (a + b + c) / 2
         return round(math.sqrt(p * ((p - a) * (p - b) * (p - c))), 2)
 
-print('Hello world')
