@@ -4,6 +4,8 @@ class Circle:
         self.radius = radius
 
     def area_circle(self, radius): #Вычисление площади круга
+        if radius <= 0:
+            raise ValueError("Радиус должен быть положительным числом.")
         return round(math.pi * (radius ** 2), 2)
 
 class Triangle:
@@ -13,6 +15,10 @@ class Triangle:
         self.c = c
         
     def check_triangle(self, a, b, c): #Проверка на прямоугольный треугольник
+        if a <= 0 or b <= 0 or c <= 0:
+            raise ValueError("Стороны треугольника должны быть положительными числами.")
+        if a + b <= c or a + c <= b or b + c <= a:
+            raise ValueError("Стороны не могут образовывать треугольник.")
         if a ** 2 == b ** 2 + c ** 2 or b ** 2 == a ** 2 + c ** 2 or c ** 2 == a ** 2 + b ** 2:
             return True
         return False
